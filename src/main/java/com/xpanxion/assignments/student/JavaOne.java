@@ -1,19 +1,43 @@
 package com.xpanxion.assignments.student;
-
+import java.util.Scanner;                   // import Scanner class
 public class JavaOne {
 
     //
     // Constructors
     //
+    Scanner console = new Scanner(System.in);
 
     public JavaOne() {}
+
+    /*
+    DELETE THIS LATER!!!
+    Navigate to java-I-assignments.md and complete the tasks. For each task:
+
+        Plan your solution
+        Pseudocode
+        Code
+        Test
+     */
 
     //
     // Public methods
     //
 
     public void ex1() {
-        System.out.println("Student 1: ex1.");
+        /*
+        This method prompts the user to enter their name and prints their name in upper case.
+
+        PSEUDOCODE:
+        1. prompt user to enter name
+        2. save name to String variable
+        3. use .toUpperCase to put name in uppercase letters
+        4. print name
+        */
+        System.out.print("Enter your name: ");
+        String name = console.nextLine();
+
+        System.out.println("Your name in upper case is: " + name.toUpperCase());
+
     }
 
     public void ex2() {
