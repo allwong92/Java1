@@ -44,7 +44,34 @@ public class JavaOne {
     }
 
     public void ex2() {
-        System.out.println("Student 1: ex2.");
+        /*
+        This method prompts the user to enter a String and counts the number of uppercase letters.
+
+        PSEUDOCODE:
+        1. get user input
+        2. save user input as a string
+        3. initialize count as 0 to hold number of uppercase letters in string
+        4. loop through characters in string
+        5. if character uppercase, increment count by 1
+        6. After loop end, print count
+        */
+
+        // Get user input
+        System.out.print("Enter a string: ");
+        String sentence = console.nextLine();
+
+        int count = 0;      // to hold the number of uppercase letters in string
+
+        // Loop through indexes in sentence, 0 to final index
+        for (int i = 0; i < sentence.length(); i++){
+            // if character at index same as uppercase version of char, and character is letter
+            if ((sentence.charAt(i) == (sentence.toUpperCase().charAt(i)))
+                    && (Character.isUpperCase(sentence.charAt(i)))){
+                count++;        // increment count
+            }
+
+        }
+        System.out.println("Number of uppercase letters: " + count + " .");
     }
 
     public void ex3() {
