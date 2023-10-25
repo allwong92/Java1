@@ -33,9 +33,12 @@ public class JavaOne {
         3. use .toUpperCase to put name in uppercase letters
         4. print name
         */
-        System.out.print("Enter your name: ");
-        String name = console.nextLine();
 
+        // Get user input
+        System.out.print("Enter your name: ");
+        String name = console.nextLine();       // to hold user name
+
+        // Print name in uppercase
         System.out.println("Your name in upper case is: " + name.toUpperCase());
 
     }
