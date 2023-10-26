@@ -1,4 +1,6 @@
 package com.xpanxion.assignments.student;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;                   // import Scanner class
 import java.util.StringTokenizer;           // import StringTokenizer class
 
@@ -165,7 +167,79 @@ public class JavaOne {
     }
 
     public void ex5() {
-        System.out.println("Student 1: ex5.");
+        /*
+        This method prompts the user to enter a string and prints the number of vowels
+        and consonants while looping forever until "quit" is entered. The method does not
+        count whitespace and punctuation.
+
+        PSEUDOCODE:
+
+        Consonant and Vowel Count:
+        1. initialize continue variable, set to true
+        2. initialize char array of vowels
+        3. initialize char array of consonants
+        4. while continue is true
+        5. initialize int to count number of vowels
+        6. initialize int to count number of consonants
+        7. get user input sentence as a String
+        8. loop through characters in string
+        9. if character in vowel array, increment number of vowels by 1
+        10. if character in consonant array, increment number of consonants by 1
+        11. after loop, print number of vowels and consonants
+        12. allow user to decide to continue or not
+         */
+
+        boolean isContinue = true;      // to hold if use wants to continue
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u'};
+        char[] consonants = {'b', 'c', 'd', 'f', 'g', 'h',  'j', 'k', 'l', 'm',
+                'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
+
+        while (isContinue){     // while user wants to continue
+
+            // Get user input String
+            System.out.print("Enter a string: ");
+            String user_string = console.nextLine();
+            user_string = user_string.toLowerCase();        // set user_string to lowercase
+
+
+            if (user_string.equals("quit")){        // if user types quit
+                isContinue = false;                 // set isContinue to false
+                break;
+            }
+
+            // Variables to count number of vowels and consonants
+            int num_vowels = 0;
+            int num_consonants = 0;
+
+            char[] u_string_arr = user_string.toCharArray();        // make user string into char[]
+
+
+            for (char c : u_string_arr){
+                // Loop through vowel array
+                for (char vowel: vowels){
+                    if (vowel == c){
+                        num_vowels++;
+                    }
+                }
+
+                // Loop through consonant array
+                for (char consonant: consonants){
+                    if (consonant == c) {
+                        num_consonants++;
+                    }
+                }
+            }
+
+            // Print number of vowels and consonants for user_string
+            System.out.println("Number of vowels: " + num_vowels);
+            System.out.println("Number of consonants: " + num_consonants);
+
+        }
+
+
+
+        // Variables
+
     }
 
     public void ex6() {
