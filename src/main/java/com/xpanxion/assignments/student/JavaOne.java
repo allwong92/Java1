@@ -1,5 +1,7 @@
 package com.xpanxion.assignments.student;
 import java.util.Scanner;                   // import Scanner class
+import java.util.StringTokenizer;           // import StringTokenizer class
+
 public class JavaOne {
 
     //
@@ -28,6 +30,8 @@ public class JavaOne {
         This method prompts the user to enter their name and prints their name in upper case.
 
         PSEUDOCODE:
+
+        Uppercase Name
         1. prompt user to enter name
         2. save name to String variable
         3. use .toUpperCase to put name in uppercase letters
@@ -48,6 +52,8 @@ public class JavaOne {
         This method prompts the user to enter a String and counts the number of uppercase letters.
 
         PSEUDOCODE:
+
+        Count Uppers
         1. get user input
         2. save user input as a string
         3. initialize count as 0 to hold number of uppercase letters in string
@@ -75,7 +81,40 @@ public class JavaOne {
     }
 
     public void ex3() {
-        System.out.println("Student 1: ex3.");
+        /*
+        This method prompts the user to enter a string and capitalizes every
+        other word, starting with the first word. Print out the resulting string.
+
+        PSEUDOCODE:
+
+        Capitalize Words:
+        1. get user input
+        2. save user input as string
+        3. use StringTokenizer to split string on delimeter " "
+        4. iterate through StringTokenizer, skipping every other string start from 0
+        5. capitalize first index of String (the first letter in each part)
+        6. print in pairs
+
+         */
+
+        // Get user input
+        System.out.print("Enter a string: ");
+        String sentence = console.nextLine();
+
+        // Create tokenizer object
+        StringTokenizer st = new StringTokenizer(sentence, " ");
+
+        System.out.println(st.countTokens());
+
+        // Loop through the tokens (words in sentence)
+        for (int i = 0; i < st.countTokens()+ 2; i+= 2){
+            String currentToken = st.nextToken();       // to hold next token
+            char capitalFirst = Character.toUpperCase(currentToken.charAt(0));      // capitalize first letter
+
+            // Print capitalized token and one after it with spaces between
+            System.out.print(capitalFirst + currentToken.substring(1) + " " + st.nextToken() + " ");
+        }
+
     }
 
     public void ex4() {
