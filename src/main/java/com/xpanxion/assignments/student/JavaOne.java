@@ -116,7 +116,52 @@ public class JavaOne {
     }
 
     public void ex4() {
-        System.out.println("Student 1: ex4.");
+        /*
+        This method tests if a word is a palindrome or not.
+
+        PEUDOCODE:
+
+        Classic Palindrome:
+        1. get user word as input
+        2. initialize a Stringbuilder object, starts with no letters, to hold letters from user word
+        3. if word has odd letters, add middle letter into Stringbuilder object
+        4. then loop through remaining letters in word
+        5. check if both letters on opposite sides of middle are the same, add letters to Stringbuilder
+        6. if Stringbuilder same length as original word, then it is a palindrome
+        7. else, it is not a palindrome
+        */
+
+        // Get user word input
+        System.out.print("Enter string: ");
+        String word = console.nextLine();
+
+        // Initialize built_word to hold matching letters
+        StringBuilder built_word = new StringBuilder(word.length());
+
+
+        if (word.length() % 2 != 0) {       // if word has odd length
+            built_word.append(word.charAt(word.length()/2));    // add middle char to built_word
+        }
+
+        // Loop through indexes for first half of word
+        for (int i = 0; i< word.length()/2; i++){
+            // if character in first half matches character in second
+            if (word.charAt(i) == word.charAt((word.length() - 1) - i)) {
+                // insert character in first half of built_word
+                built_word.insert(i,word.charAt(i));
+                // append character to end of built_word
+                built_word.append( word.charAt(i));
+            }
+        }
+
+        // if length of built word same as length of original word
+        if (built_word.length() == word.length()){
+            // if lengths match, it is a palindrome
+            System.out.println("YES");
+        } else{     // if not matching, not a palindrome
+            System.out.println("NO");
+        }
+
     }
 
     public void ex5() {
