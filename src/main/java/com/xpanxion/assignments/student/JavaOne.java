@@ -236,18 +236,36 @@ public class JavaOne {
 
         }
 
-
-
-        // Variables
-
     }
 
     public void ex6() {
-        System.out.println("Student 1: ex6.");
+        /*
+        This method prompts the user for two Integers and adds them.
+
+        PSEUDOCODE:
+
+        Add Only Calculator:
+        1. get user first number
+        2. get user second number
+        3. add user inputs together for sum
+        4. print sum
+         */
+
+        // Get first number from user
+        System.out.print("Enter first number: ");
+        int int1 = console.nextInt();
+
+        // Get second number from user
+        System.out.print("Enter second number: ");
+        int int2 = console.nextInt();
+
+        // Calculate sum
+        int sum = int1 + int2;
+        System.out.println("Result: " + sum);
     }
 
     public void ex7() {
-        System.out.println("Student 1: ex7.");
+
     }
 
     public void ex8() {
