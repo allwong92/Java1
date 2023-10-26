@@ -104,8 +104,6 @@ public class JavaOne {
         // Create tokenizer object
         StringTokenizer st = new StringTokenizer(sentence, " ");
 
-        System.out.println(st.countTokens());
-
         // Loop through the tokens (words in sentence)
         for (int i = 0; i < st.countTokens()+ 2; i+= 2){
             String currentToken = st.nextToken();       // to hold next token
