@@ -292,7 +292,7 @@ public class JavaOne {
         System.out.print("Enter operation (add, sub, mul, div): ");
         String op = console.next().toLowerCase();
 
-        int result;     // to hold user input
+        int result;     // to hold result of operation
         switch (op) {
             case "add":
                 result = int1 + int2;
