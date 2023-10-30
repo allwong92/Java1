@@ -265,6 +265,54 @@ public class JavaOne {
     }
 
     public void ex7() {
+        /*
+        This method prompts the user for integers and an operation and returns the result.
+
+        PSEUDOCODE:
+
+        Full Calculator:
+        1. get first int from user
+        2. get second int from user
+        3. get operation from user
+        4. if operation is add, then add ints and print sum
+        5. if operation is sub, then subtract ints and prints difference
+        6. if operation is mul, then multiply ints and print product
+        7. if operation is div, then divide ints and print division
+         */
+
+        // Get first int
+        System.out.print("Enter first integer: ");
+        int int1 = console.nextInt();
+
+        // Get second int
+        System.out.print("Enter second integer: ");
+        int int2 = console.nextInt();
+
+        // Get operation
+        System.out.print("Enter operation (add, sub, mul, div): ");
+        String op = console.next().toLowerCase();
+
+        int result;     // to hold user input
+        switch (op) {
+            case "add":
+                result = int1 + int2;
+                System.out.println("Result: " + result);
+                break;
+            case "sub":
+                result = int1 - int2;
+                System.out.println("Result: " + result);
+                break;
+            case "mul":
+                result = int1 * int2;
+                System.out.println("Result: " + result);
+                break;
+            case "div":
+                result = int1 / int2;
+                System.out.println("Result: " + result);
+
+        }
+
+
 
     }
 
